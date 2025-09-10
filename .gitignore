@@ -1,0 +1,26 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.local
+
+# IDE files
+.vscode/
+.idea/
+
+# Bun
+bun.lockb
+
+# Others
+*.swp

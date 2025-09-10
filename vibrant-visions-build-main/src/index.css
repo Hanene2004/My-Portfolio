@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* scroll reveal */
+.reveal-init { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+.reveal-in { opacity: 1; transform: translateY(0); }
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Portfolio Light Theme (default) */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 263 70% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 35%;
+
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 263 70% 52%;
+
+    --radius: 0.75rem;
+
+    /* Portfolio specific colors */
+    --portfolio-accent: 262 83% 58%;
+    --portfolio-accent-light: 262 83% 70%;
+    --portfolio-muted: 220 14% 96%;
+    --portfolio-surface: 210 40% 98%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(263 70% 62%), hsl(262 83% 58%));
+    --gradient-accent: linear-gradient(135deg, hsl(262 83% 58%), hsl(242 83% 58%));
+    --gradient-surface: linear-gradient(135deg, hsl(0 0% 100%), hsl(210 40% 98%));
+    
+    /* Shadows */
+    --shadow-primary: 0 10px 40px -10px hsl(263 70% 62% / 0.25);
+    --shadow-card: 0 8px 24px -8px hsl(210 20% 50% / 0.25);
+    --shadow-glow: 0 0 40px hsl(263 70% 62% / 0.2);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    /* Portfolio Dark Theme */
+    --background: 220 26% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 26% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 26% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 263 70% 62%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 220 26% 12%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 26% 14%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 262 83% 58%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 26% 18%;
+    --input: 220 26% 18%;
+    --ring: 263 70% 62%;
+
+    --radius: 0.75rem;
+
+    /* Portfolio specific colors */
+    --portfolio-accent: 262 83% 58%;
+    --portfolio-accent-light: 262 83% 70%;
+    --portfolio-muted: 220 20% 25%;
+    --portfolio-surface: 220 26% 10%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(263 70% 62%), hsl(262 83% 58%));
+    --gradient-accent: linear-gradient(135deg, hsl(262 83% 58%), hsl(242 83% 58%));
+    --gradient-surface: linear-gradient(135deg, hsl(220 26% 8%), hsl(220 26% 12%));
+    
+    /* Shadows */
+    --shadow-primary: 0 10px 40px -10px hsl(263 70% 62% / 0.3);
+    --shadow-card: 0 8px 32px -8px hsl(220 26% 4% / 0.5);
+    --shadow-glow: 0 0 40px hsl(263 70% 62% / 0.2);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
